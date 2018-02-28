@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
+import cucumber.api.java.After;
 import cucumber.api.java.es.Dado;
 
 public class Steps {
@@ -18,6 +19,11 @@ public class Steps {
 		driver = new ChromeDriver(options);
 		driver.get(url);
 		driver.manage().window().maximize();
+	}
+	
+	@After
+	public void tearDown() {
+		driver.quit();
 	}
 
 }
