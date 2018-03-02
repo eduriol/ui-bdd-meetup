@@ -13,3 +13,13 @@ Quiero poder realizar búsquedas
 		Dado que estoy en la web de DC Comics
 		Cuando busco la palabra "palabrainventada"
 		Entonces no se muestran resultados
+		
+	Escenario: Buscar páginas sobre Superman
+		Dado que estoy en la web de DC Comics
+		Cuando busco la palabra "superman"
+		Entonces se muestra un listado de resultados
+		
+	Escenario: Búsqueda sin resultados
+		Dado que estoy en la web de DC Comics
+		Cuando busco la palabra "spiderman"
+		Entonces no se muestran resultados
