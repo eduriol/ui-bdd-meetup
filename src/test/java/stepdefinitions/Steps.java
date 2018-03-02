@@ -15,6 +15,7 @@ public class Steps {
 	private HomePOM homePage;
 	private ResultadosBusquedaPOM resultadosBusquedaPage;
 	private String resultadoEsperado = "1-25";
+	private String sinResultados = "0-0";
 
 	@Dado("^que estoy en la web de DC Comics$")
 	public void que_estoy_en_la_web_de_dc_comics() {
@@ -31,6 +32,11 @@ public class Steps {
 	@Entonces("^se muestra un listado de resultados$")
 	public void se_muestra_un_listado_de_resultados() {
 	    Assert.assertTrue(resultadosBusquedaPage.getResultado().contains(this.resultadoEsperado));
+	}
+	
+	@Entonces("^no se muestran resultados$")
+	public void no_se_muestran_resultados() {
+		Assert.assertTrue(resultadosBusquedaPage.getResultado().contains(this.sinResultados));
 	}
 	
 	@After
