@@ -8,3 +8,8 @@ Quiero poder realizar búsquedas
 		Dado que estoy en la web de DC Comics
 		Cuando busco la palabra "batman"
 		Entonces se muestra un listado de resultados
+		
+	Escenario: Búsqueda sin resultados
+		Dado que estoy en la web de DC Comics
+		Cuando busco la palabra "palabrainventada"
+		Entonces no se muestran resultados
